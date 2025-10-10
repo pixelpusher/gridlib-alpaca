@@ -5,13 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <title>Livecoding Complex 3D Printing Patterns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      svg {
-        max-height: 300px;
-        display: block;
-        margin: auto;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
   </head>
   <body>
     <div class="reveal">
@@ -52,7 +49,7 @@
                 refY="4"
                 orient="auto-start-reverse"
               >
-                <polygon points="0 0, 8 4, 0 8"></polygon>
+                <polygon points="0 0, 8 4, 0 8" fill="#eeef44"></polygon>
               </marker>
             </defs>
             <rect
@@ -83,22 +80,22 @@
               fill="#e68a00"
               stroke="#aa5a00"
             />
-            <text x="350" y="70" font-size="16">Pause ➜ pressure builds</text>
+            <text class="lbl" x="350" y="70" font-size="16">Pause ➜ pressure builds</text>
             <line
               x1="345"
               y1="75"
               x2="308"
               y2="102"
-              stroke="#333"
+              stroke="#eeef44"
               marker-end="url(#arrow)"
             />
-            <text x="350" y="160" font-size="16">Drip on part</text>
+            <text class="lbl" x="350" y="160" font-size="16">Drip on part</text>
             <line
               x1="345"
               y1="165"
               x2="305"
               y2="160"
-              stroke="#333"
+              stroke="#eeef44"
               marker-end="url(#arrow)"
             />
           </svg>
@@ -109,7 +106,7 @@
           <h3>Why Livecoding is Hard</h3>
           <ul>
             <li>
-              Speed & material: FDM printing is time-sensitive, unpredictable
+              Speed &amp; material: FDM printing is time-sensitive, unpredictable
             </li>
             <li>
               Cognitive load of creating complex forms on the fly procedurally
@@ -150,7 +147,7 @@
               class="shape"
               stroke="#1f77b4"
             />
-            <text x="120" y="180" class="label" text-anchor="middle">
+            <text class="lbl" x="120" y="180" class="lbl" text-anchor="middle">
               preset zig zag
             </text>
 
@@ -161,7 +158,7 @@
                 class="shape"
                 stroke="#9467bd"
               />
-              <text x="80" y="190" class="label" text-anchor="middle">
+              <text class="lbl" x="80" y="190" class="lbl" text-anchor="middle">
                 present polygon
               </text>
             </g>
@@ -176,7 +173,7 @@
               stroke="#2ca02c"
               stroke-width="4"
             />
-            <text x="760" y="130" class="label" text-anchor="middle">
+            <text class="lbl" x="760" y="130" class="lbl" text-anchor="middle">
               present line
             </text>
           </svg>
@@ -206,19 +203,13 @@
             aria-label="Hexagon with sine modifier"
             style="max-height: 280px; width: 100%"
           >
-            <style>
-              .label {
-                font-size: 16px;
-                fill: #333;
-              }
-            </style>
             <polygon
               points="150,60 230,60 270,130 230,200 150,200 110,130"
               fill="none"
               stroke="#888"
               stroke-width="2"
             />
-            <text class="label" x="90" y="240">Base polygon</text>
+            <text class="lbl" x="90" y="240">Base polygon</text>
             <path
               d="M450,130 m-80,0 q40,-40 80,0 q40,40 80,0 q40,-40 80,0"
               fill="none"
@@ -232,7 +223,7 @@
               stroke-width="3"
               opacity="0.4"
             />
-            <text class="label" x="360" y="240">
+            <text class="lbl" x="360" y="240">
               Modifier: r += A·sin(t + index)
             </text>
           </svg>
@@ -265,21 +256,21 @@
                 refY="5"
                 orient="auto"
               >
-                <polygon points="0 0, 10 5, 0 10" fill="#333" />
+                <polygon points="0 0, 10 5, 0 10" fill="#eeef44" />
               </marker>
             </defs>
             <circle cx="80" cy="180" r="10" fill="#6a5acd" />
-            <text x="70" y="210" font-size="12">0</text>
+            <text x="70" y="210" font-size="12" fill="#eeef44">0</text>
             <circle cx="200" cy="80" r="10" fill="#6a5acd" />
-            <text x="190" y="110" font-size="12">1</text>
+            <text x="190" y="110" font-size="12" fill="#eeef44" fill="#eeef44">1</text>
             <circle cx="320" cy="150" r="10" fill="#6a5acd" />
-            <text x="310" y="180" font-size="12">2</text>
+            <text x="310" y="180" font-size="12" fill="#eeef44">2</text>
             <circle cx="440" cy="60" r="10" fill="#6a5acd" />
-            <text x="430" y="90" font-size="12">3</text>
+            <text x="430" y="90" font-size="12" fill="#eeef44">3</text>
             <circle cx="560" cy="130" r="10" fill="#6a5acd" />
-            <text x="550" y="160" font-size="12">4</text>
+            <text x="550" y="160" font-size="12" fill="#eeef44">4</text>
             <circle cx="680" cy="90" r="10" fill="#6a5acd" />
-            <text x="670" y="120" font-size="12">5</text>
+            <text x="670" y="120" font-size="12" fill="#eeef44">5</text>
             <polyline
               points="80,180 200,80 320,150 440,60 560,130 680,90"
               fill="none"
@@ -326,18 +317,19 @@
               stroke="#333"
               marker-end="url(#arrow2)"
             />
-            <rect
+            <!-- <rect
               x="40"
-              y="10"
-              width="720"
-              height="40"
-              fill="none"
+              y="14"
+              width="660"
+              height="30"
+              fill="#222"
+              opacity="0.3"
               stroke="#888"
               stroke-dasharray="4 4"
             />
-            <text x="50" y="35" font-size="16">
-              Iterator(state): index → next(point); params: speed, loop, bounce
-            </text>
+            <text class="lbl" x="50" y="35" font-size="16">
+              Iterator → next point (variable speed)
+            </text> -->
           </svg>
         </section>
 
@@ -355,12 +347,7 @@
             aria-label="Timeline and crossfade"
             style="max-height: 250px; width: 100%"
           >
-            <style>
-              .lbl {
-                font-size: 14px;
-                fill: #333;
-              }
-            </style>
+            
             <line x1="60" y1="220" x2="760" y2="220" stroke="#333" />
             <text class="lbl" x="380" y="245">time →</text>
             <rect
