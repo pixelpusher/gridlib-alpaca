@@ -1,0 +1,15 @@
+{
+  "hash": "af5106e0",
+  "configHash": "88fb0e24",
+  "lockfileHash": "ae4a880f",
+  "browserHash": "088be035",
+  "optimized": {
+    "reveal.js": {
+      "src": "../../node_modules/reveal.js/dist/reveal.esm.js",
+      "file": "reveal__js.js",
+      "fileHash": "b67eaddb",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
